@@ -1,4 +1,4 @@
-package com.microsoft.meetup.geneva.demo;
+package com.microsoft.meetup.k8s.geneva.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
