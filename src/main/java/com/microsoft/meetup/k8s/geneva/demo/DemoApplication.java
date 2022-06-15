@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoApplication {
 
-
 	@RequestMapping("/")
 	public String index() {
 		return "Welcome to Kubernetes Geneva\n";
