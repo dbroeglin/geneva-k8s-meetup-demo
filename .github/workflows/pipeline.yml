@@ -60,7 +60,7 @@ jobs:
       run: |
         echo "::add-mask::${{ steps.createACR.outputs.acr_password }}"
         docker login ${{ env.REGISTRYNAME }}.azurecr.io --username ${{ steps.createACR.outputs.acr_username }} --password ${{ steps.createACR.outputs.acr_password }}
-        docker build "$GITHUB_WORKSPACE/Application" -f  "Application/Dockerfile" -t ${{ env.REGISTRYNAME }}.azurecr.io/${{ env.IMAGENAME }}:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE" -f  "Dockerfile" -t ${{ env.REGISTRYNAME }}.azurecr.io/${{ env.IMAGENAME }}:${{ github.sha }}
         docker push ${{ env.REGISTRYNAME }}.azurecr.io/${{ env.IMAGENAME }}:${{ github.sha }}
  
   deploy:
@@ -115,8 +115,8 @@ jobs:
       id: bakeManifests
       with:
         renderEngine: 'helm'
-        helmChart: './Application/charts/sampleapp' 
-        overrideFiles: './Application/charts/sampleapp/values.yaml'
+        helmChart: './charts/sampleapp' 
+        overrideFiles: './charts/sampleapp/values.yaml'
         overrides: |
             image.repository:${{ env.REGISTRYNAME }}.azurecr.io/${{ env.IMAGENAME }}
             image.tag:${{ github.sha }}
