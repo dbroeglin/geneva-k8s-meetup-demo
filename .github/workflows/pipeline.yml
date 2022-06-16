@@ -115,8 +115,8 @@ jobs:
       id: bakeManifests
       with:
         renderEngine: 'helm'
-        helmChart: './charts/sampleapp' 
-        overrideFiles: './charts/sampleapp/values.yaml'
+        helmChart: './charts/demo' 
+        overrideFiles: './charts/demo/values.yaml'
         overrides: |
             image.repository:${{ env.REGISTRYNAME }}.azurecr.io/${{ env.IMAGENAME }}
             image.tag:${{ github.sha }}
