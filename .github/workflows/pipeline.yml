@@ -5,21 +5,21 @@ on:
       - main
 
 env:
-  RESOURCEGROUPNAME: "rg-k8s-geneva-demo-001"
+  RESOURCEGROUPNAME: "rg-k8s-geneva-demo-002"
   LOCATION: "West Europe"
   SUBSCRIPTIONID: "d3f70c0b-9bea-43b8-803c-7f8ef0b6fd15"
   IMAGENAME: "genevak8smeetupstarter4508"
   REGISTRYSKU: "Standard"
-  REGISTRYNAME: "acrk8sgenevademo001"
+  REGISTRYNAME: "acrk8sgenevademo002"
   REGISTRYLOCATION: "West Europe"
-  CLUSTERNAME: "aks-k8s-geneva-demo-001"
+  CLUSTERNAME: "aks-k8s-geneva-demo-002"
   APPINSIGHTSLOCATION: "West Europe"
   CLUSTERLOCATION: "West Europe"
   AGENTCOUNT: "3"
   AGENTVMSIZE: "Standard_DS2_v2"
   KUBERNETESVERSION: 1.23.5
   OMSLOCATION: "West Europe"
-  OMSWORKSPACENAME: "k8sgenevademo001"
+  OMSWORKSPACENAME: "k8sgenevademo002"
   HTTPSAPPLICATIONROUTINGENABLED: false
   KUBERNETESAPI: "apps/v1"
   NAMESPACE: "demo"
